@@ -1,26 +1,42 @@
 # Sui Escrow
 
-An original Move smart-contract prototype for a buyer/seller escrow workflow on Sui.
+An educational Move prototype for a buyer/seller escrow workflow on Sui.
+
+## Scope
+
+The project explores:
+
+- shared-object state
+- buyer authorization
+- exact payment validation
+- funding and settlement flows
+- refund handling
+- lifecycle events
+- integration-friendly read helpers
 
 ## Status
 
-This is an educational prototype prepared for further development. It has not been compiled or deployed yet.
+This is an original educational prototype and has not been compiled or deployed from this environment. It should not be treated as production-ready or audited.
 
-## Intended workflow
+Before deployment, the package should be built, linted, and tested with the Sui CLI against a pinned, compatible framework/toolchain.
 
-1. Buyer creates an escrow with a seller and amount.
-2. Buyer funds the escrow with the exact amount.
-3. Buyer releases payment after the agreed condition is met.
-4. Seller can cancel before funding.
+## Intended lifecycle
 
-## Planned improvements
+Created -> Funded -> Released
 
-- Store the escrowed Coin<SUI> directly in the escrow object.
-- Add expiry and refund handling.
-- Add authorization and invalid-amount tests.
-- Add events for creation, funding, release, and cancellation.
-- Compile and test against a pinned Sui framework revision.
+Created -> Funded -> Refunded
+
+Created -> Cancelled before funding
+
+## Future work
+
+- expiry using Sui Clock
+- dispute/arbitration flow
+- comprehensive authorization/state-transition tests
+- TypeScript PTB client
+- reproducible CI build
+- security review
 
 ## Disclaimer
 
-Educational prototype only; not production financial software.
+Educational prototype only; not financial software and not audited.
