@@ -1,0 +1,6 @@
+[package]
+name = "SuiEscrow"
+version = "0.0.1"
+
+[addresses]
+sui_escrow = "0x0"
