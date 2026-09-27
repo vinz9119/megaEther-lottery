@@ -1,0 +1,1 @@
+Prepared for future Sui/Move development. This repository is an existing React project and is not being represented as original Sui/Move work.
